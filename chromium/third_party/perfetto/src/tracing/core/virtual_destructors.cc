@@ -32,7 +32,7 @@ Producer::~Producer() = default;
 TracingService::~TracingService() = default;
 #ifdef __clang__
 #pragma clang diagnostic push
-#pragma clang diagnostic ignored"-Wdeprecated-declarations"
+#pragma clang diagnostic ignored "-Wdtor-typedef"
 #endif
 TracingService::ConsumerEndpoint::~ConsumerEndpoint() = default;
 TracingService::ProducerEndpoint::~ProducerEndpoint() = default;
