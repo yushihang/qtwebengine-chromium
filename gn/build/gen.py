@@ -362,7 +362,7 @@ def WriteGNNinja(path, platform, host, options):
       cflags.append(min_mac_version_flag)
       ldflags.append(min_mac_version_flag)
       ldflags.append(
-          "-L\"/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/lib\"")
+          "-L\"/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib\"")
     elif platform.is_aix():
       cflags_cc.append('-maix64')
       ldflags.append('-maix64')
