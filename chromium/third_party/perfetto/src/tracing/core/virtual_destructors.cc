@@ -30,8 +30,15 @@ namespace perfetto {
 Consumer::~Consumer() = default;
 Producer::~Producer() = default;
 TracingService::~TracingService() = default;
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored"-Wdeprecated-declarations"
+#endif
 TracingService::ConsumerEndpoint::~ConsumerEndpoint() = default;
 TracingService::ProducerEndpoint::~ProducerEndpoint() = default;
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
 SharedMemory::~SharedMemory() = default;
 SharedMemory::Factory::~Factory() = default;
 SharedMemoryArbiter::~SharedMemoryArbiter() = default;
