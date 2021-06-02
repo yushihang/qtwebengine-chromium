@@ -343,7 +343,7 @@ struct IsConvertibleFromOptional
     : std::integral_constant<
           bool,
           std::is_constructible<T, Optional<U>&>::value ||
-              std::is_constructible<T, const Optional<U>&>::value ||
+              //std::is_constructible<T, const Optional<U>&>::value ||
               std::is_constructible<T, Optional<U>&&>::value ||
               std::is_constructible<T, const Optional<U>&&>::value ||
               std::is_convertible<Optional<U>&, T>::value ||
